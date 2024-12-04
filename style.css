@@ -6,76 +6,152 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  /* MIT 样式字体 */
+    font-family: Arial, sans-serif;
     background-color: white;
     color: black;
     line-height: 1.6;
+    padding-top: 60px; /* Add space for the top black bar */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-header {
+/* Top black bar */
+.top-bar {
     display: flex;
-    align-items: center; /* Vertically center logo and text */
-    justify-content: space-between; /* Align items to the left */
-    padding: 20px;
-    background-color: #1a73e8;  /* 科技蓝色背景 */
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
     color: white;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header img {
-    width: 60px;  /* Ensure logo is the correct size */
-    margin-right: 15px;
-}
-
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-header h1:hover {
-    color: #4c6ef5; /* Change color on hover */
-}
-
-/* Logo and search bar container */
-.logo-search-container {
+.left-section {
     display: flex;
     align-items: center;
 }
 
-.search-bar {
-    padding: 8px 12px;
+.left-section .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.left-section .logo-container img {
+    margin-right: 10px;
+}
+
+.right-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
     font-size: 1em;
-    border-radius: 5px;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Divider line below the top bar */
+.divider {
+    height: 2px;
+    background-color: black;
+    width: 100%;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Left Column (Narrow) */
+.left-column {
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-right: 2px solid black;
+    padding-top: 80px; /* Add space to move content down */
+    position: relative;
+    overflow-y: hidden; /* Disable scrolling in left column */
+}
+
+/* Right Column (Wide) */
+.right-column {
+    width: 75%;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling */
+    padding-top: 80px; /* Add space to move content down */
+    height: 100vh; /* Ensure the right column takes up the full height of the page */
+}
+
+/* Search Bar (Left Column) */
+.search-bar {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+    background-color: white;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px;
     border: none;
-    outline: none;
-    margin-left: 10px;
+    border-radius: 5px;
 }
 
-.search-bar:focus {
-    border: 2px solid #4c6ef5;
+.search-bar button {
+    background-color: #4c6ef5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Content section */
-.content {
-    text-align: center;
-    padding: 40px 20px;
+.search-bar button:hover {
+    background-color: #3a56c5;
 }
 
+/* SSES Link */
+.sses-container {
+    margin-top: 10px;
+}
+
+.sses-container a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.sses-container a:hover {
+    text-decoration: underline;
+}
+
+/* Content */
 .content h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Add animation effect */
-}
-
-.content h2:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .content p {
     font-size: 1.2em;
     margin: 10px 0;
-    color: #333;
 }
 
 button {
@@ -87,14 +163,13 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #3a56c5; /* Darker blue on hover */
+    background-color: #3a56c5;
 }
 
-/* Footer section */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -109,72 +184,44 @@ footer p {
     font-size: 1em;
 }
 
-/* Projects section */
-.projects {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.projects h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.projects a {
-    color: #4c6ef5;
-    text-decoration: none;
-}
-
-.projects a:hover {
-    text-decoration: underline;
-}
-
-/* Google Calendar section */
+/* Google Calendar Section */
 .calendar {
-    text-align: center;
     margin-top: 40px;
 }
 
 .calendar iframe {
     border: 0;
-    width: 800px;
-    height: 600px;
+    width: 100%;
+    height: 500px;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design */
 @media (max-width: 768px) {
-    header {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-nav {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        margin-top: 20px;
     }
 
-    header img {
-        width: 50px;
-        margin-bottom: 10px;
+    .top-nav a {
+        margin: 10px 0;
     }
 
-    header h1 {
-        font-size: 2.5em;
+    .content-container {
+        flex-direction: column;
     }
 
-    .content h2 {
-        font-size: 2em;
-    }
-
-    .content p {
-        font-size: 1.1em;
-    }
-
-    button {
-        font-size: 1.1em;
-        padding: 12px 24px;
-    }
-
-    /* Adjust calendar iframe size for smaller screens */
-    .calendar iframe {
+    .left-column {
         width: 100%;
-        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .right-column {
+        width: 100%;
     }
 }

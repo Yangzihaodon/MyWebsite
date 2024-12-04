@@ -7,42 +7,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <!-- 左侧 Logo 和 搜索栏 -->
-        <div class="logo-search-container">
-            <img src="images/logo.png" alt="VNEBULA Logo" class="logo">
-            <input type="text" class="search-bar" placeholder="Search...">
+
+    <!-- Top black bar -->
+    <header class="top-bar">
+        <div class="left-section">
+            <!-- Logo and VNEBULA -->
+            <div class="logo-container">
+                <img src="images/logo.png" alt="VNEBULA Logo" width="40">
+                <h1>VNEBULA</h1>
+            </div>
         </div>
-        <!-- 网站名称 -->
-        <h1>VNEBULA</h1>
+        <div class="right-section">
+            <!-- Navigation Links -->
+            <nav class="top-nav">
+                <a href="#resources">Resources</a>
+                <a href="#inventions">Inventions</a>
+                <a href="#ai-tools">AI Tools</a>
+                <a href="#news">News</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#about">About SHANGDE</a>
+                <a href="#goals">Goals</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="content">
-        <h2>About Us</h2>
-        <p>VNEBULA is an innovative team that uses AI tools to solve real-life and school problems. Our goal is to create advanced technology solutions that can shape the future.</p>
-        
-        <h3>Team Members</h3>
-        <p><strong>DON:</strong> Founder & Tech Enthusiast, focusing on AI and Plasma Rocket Technologies.</p>
-        <p><strong>JANE:</strong> Software Developer & AI Specialist, with a passion for developing AI-based solutions for education and daily life.</p>
+    <!-- Black Divider Line -->
+    <div class="divider"></div>
 
-        <h3>Our Technologies</h3>
-        <p>We focus on cutting-edge technology that uses AI to solve real-world problems, both for school and life. By leveraging machine learning algorithms, we aim to improve efficiency and innovation in multiple domains.</p>
+    <!-- Left and Right Content -->
+    <div class="content-container">
 
-        <button onclick="alert('Thank you for your interest!')">Contact Us</button>
-    </section>
+        <!-- Left Column (Narrow) -->
+        <div class="left-column">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <!-- SSES Link -->
+            <div class="sses-container">
+                <a href="https://www.shangdejy.com/en/" target="_blank">SSES</a>
+            </div>
+        </div>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <h3>For a full list of our projects see <a href="#projects">Projects</a>:</h3>
-    </section>
+        <!-- Right Column (Wide) -->
+        <div class="right-column">
+            <section class="content">
+                <h2>About Us</h2>
+                <p>VNEBULA is an innovative team that uses AI tools to solve real-life and school problems. Our goal is to create advanced technology solutions that can shape the future.</p>
+                
+                <h3>Team Members</h3>
+                <p><strong>DON:</strong> Founder & Tech Enthusiast, focusing on AI and Plasma Rocket Technologies.</p>
+                <p><strong>JANE:</strong> Software Developer & AI Specialist, with a passion for developing AI-based solutions for education and daily life.</p>
 
-    <!-- Google Calendar Section -->
-    <section class="calendar">
-        <h3>Our Calendar</h3>
-        <iframe src="https://calendar.google.com/calendar/embed?src=yangzihao1908%40gmail.com&ctz=Asia%2FShanghai" 
-        style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </section>
+                <h3>Our Technologies</h3>
+                <p>We focus on cutting-edge technology that uses AI to solve real-world problems, both for school and life. By leveraging machine learning algorithms, we aim to improve efficiency and innovation in multiple domains.</p>
 
+                <button onclick="alert('Thank you for your interest!')">Contact Us</button>
+            </section>
+
+            <!-- Google Calendar Section -->
+            <section class="calendar">
+                <h3>Our Calendar</h3>
+                <iframe src="https://calendar.google.com/calendar/embed?src=yangzihao1908%40gmail.com&ctz=Asia%2FShanghai" 
+                style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 VNEBULA. All rights reserved.</p>
     </footer>
