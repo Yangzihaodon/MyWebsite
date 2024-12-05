@@ -54,7 +54,7 @@ body {
 /* Divider */
 .divider {
     height: 2px;
-    background-color: black; /* Set the divider to black */
+    background-color: black;
     margin: 0;
 }
 
@@ -64,33 +64,33 @@ body {
     justify-content: space-between;
     padding: 20px;
     margin-top: 20px;
-    height: calc(100vh - 140px); /* Ensure full page height minus header and footer */
+    height: calc(100vh - 140px);
 }
 
 /* Left Column (Narrow) */
 .left-column {
     width: 30%;
     padding-right: 20px;
-    border-right: 2px solid black; /* Black divider line between left and right columns */
+    border-right: 2px solid black;
     position: relative;
-    overflow: hidden; /* Disable scrolling for left side */
+    overflow: hidden;
 }
 
 /* Right Column (Wide) */
 .right-column {
     width: 65%;
-    overflow-y: auto; /* Allow vertical scroll only on the right side */
+    overflow-y: auto;
     padding-left: 20px;
 }
 
 /* Search Bar */
 .search-bar {
-    background-color: white;  /* White background for search bar */
+    background-color: white;
     color: black;
     padding: 5px;
     margin-bottom: 15px;
-    border: 2px solid black;  /* Black border around search bar */
-    border-radius: 10px;  /* Slightly rounded corners */
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .search-bar input {
@@ -101,79 +101,4 @@ body {
     width: 80%;
 }
 
-.search-bar button {
-    padding: 5px 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.search-bar button:hover {
-    background-color: #ccc;
-}
-
-/* SSES Link */
-.sses-container a {
-    display: inline-block;
-    margin-top: 15px;
-    color: black;
-    text-decoration: none;
-    border: 2px solid black;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.sses-container a:hover {
-    background-color: #f1f1f1;
-}
-
-/* Content */
-.content h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.content p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-button {
-    background-color: #4c6ef5;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #3a56c5;
-}
-
-/* Footer Section */
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-}
-
-footer p {
-    font-size: 1em;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .content-container {
-        flex-direction: column;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-    }
-}
+.search
